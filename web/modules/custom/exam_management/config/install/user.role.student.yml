@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: student
+label: Student
+weight: 2
+is_admin: false
+permissions: {  }

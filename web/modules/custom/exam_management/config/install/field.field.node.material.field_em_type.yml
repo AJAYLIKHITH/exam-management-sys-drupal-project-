@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config: [field.storage.node.field_em_type, node.type.material]
+  module: [options]
+id: node.material.field_em_type
+field_name: field_em_type
+entity_type: node
+bundle: material
+label: Material type
+description: 'Choose Video or PDF.'
+required: true
+translatable: false
+default_value: []
+default_value_callback: ''
+settings: {  }
+field_type: list_string
+

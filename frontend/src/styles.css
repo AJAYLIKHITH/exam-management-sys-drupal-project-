@@ -1,0 +1,577 @@
+:root {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #182033;
+  background: #f5f7fb;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f5f7fb;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+/* ================= LOGIN ================= */
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 5rem;
+  align-items: center;
+  padding: 5rem 8%;
+  background:
+    radial-gradient(
+      circle at top left,
+      #6d78e8,
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #111936,
+      #26337c
+    );
+  color: white;
+}
+
+.login-intro {
+  max-width: 650px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255,255,255,.15);
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: #6472e6;
+}
+
+.login-page .eyebrow {
+  color: #aeb7ff;
+}
+
+.login-intro p {
+  color: #d7dcf6;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.architecture-mini {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  color: #cbd1ff;
+}
+
+.architecture-mini span {
+  padding: .6rem 1rem;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 999px;
+}
+
+.login-card {
+  background: white;
+  color: #182033;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(0,0,0,.25);
+}
+
+.login-tabs,
+.content-tabs {
+  display: flex;
+  gap: .4rem;
+  border-bottom: 1px solid #e1e5ef;
+}
+
+.login-tabs button,
+.content-tabs button {
+  border: 0;
+  background: transparent;
+  padding: .85rem 1rem;
+  color: #687188;
+  font-weight: 700;
+}
+
+.login-tabs button.active,
+.content-tabs button.active {
+  color: #4e5dd4;
+  border-bottom: 3px solid #4e5dd4;
+}
+
+.login-card form label,
+.modal-card label {
+  display: block;
+  margin: 1.2rem 0;
+  font-weight: 700;
+}
+
+.login-card input,
+.modal-card input,
+.modal-card textarea,
+.modal-card select {
+  display: block;
+  width: 100%;
+  margin-top: .5rem;
+  padding: .85rem 1rem;
+  border: 1px solid #d5dae6;
+  border-radius: 10px;
+  outline: none;
+}
+
+.login-card input:focus,
+.modal-card input:focus,
+.modal-card textarea:focus,
+.modal-card select:focus {
+  border-color: #5867dc;
+  box-shadow: 0 0 0 3px #5867dc18;
+}
+
+.primary-button {
+  border: 0;
+  border-radius: 10px;
+  padding: .85rem 1.2rem;
+  background: #5362d7;
+  color: white;
+  font-weight: 800;
+}
+
+.primary-button.small {
+  padding: .7rem 1rem;
+}
+
+.secondary-button {
+  border: 1px solid #d7dce7;
+  background: white;
+  color: #34405a;
+  padding: .8rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.login-card .primary-button {
+  width: 100%;
+  margin-top: .5rem;
+}
+
+.login-note {
+  margin: 1.5rem 0 0;
+  font-size: .85rem;
+  color: #788198;
+}
+
+/* ================= APP ================= */
+
+.app {
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem max(5%, calc((100% - 1200px) / 2));
+  background: white;
+  border-bottom: 1px solid #e5e8f0;
+}
+
+.topbar h1 {
+  font-size: 1.8rem;
+  margin: .2rem 0;
+}
+
+.welcome {
+  color: #737c91;
+  margin: 0;
+}
+
+.logout-button,
+.back-button {
+  border: 0;
+  background: transparent;
+  color: #4e5dd4;
+  font-weight: 800;
+}
+
+.page-section,
+.workspace {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ================= EXAMS ================= */
+
+.exam-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+.exam-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e5e8f0;
+  transition: .2s;
+}
+
+.exam-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px #18244d12;
+}
+
+.exam-main {
+  width: 100%;
+  text-align: left;
+  background: white;
+  border: 0;
+  padding: 1.5rem;
+}
+
+.card-number {
+  font-size: .7rem;
+  font-weight: 900;
+  color: #5867dc;
+  letter-spacing: .1em;
+}
+
+.exam-main p {
+  color: #687188;
+  line-height: 1.6;
+}
+
+.view-link {
+  color: #5362d7;
+  font-weight: 800;
+}
+
+.card-actions {
+  display: flex;
+  gap: .5rem;
+  padding: .8rem 1rem;
+  border-top: 1px solid #edf0f5;
+}
+
+.card-actions button {
+  border: 0;
+  background: transparent;
+  color: #5362d7;
+  font-weight: 700;
+}
+
+.card-actions .danger {
+  color: #d73545;
+}
+
+/* ================= SUBJECTS ================= */
+
+.subject-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.subject-card {
+  background: white;
+  border: 1px solid #e5e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.subject-main {
+  width: 100%;
+  border: 0;
+  background: white;
+  text-align: left;
+  padding: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subject-main p {
+  color: #737c91;
+  margin-bottom: 0;
+}
+
+.subject-main span {
+  color: #5362d7;
+  font-weight: 800;
+}
+
+/* ================= WORKSPACE ================= */
+
+.workspace-heading {
+  margin-top: 2rem;
+}
+
+.content-tabs {
+  margin: 2rem 0;
+}
+
+/* ================= MATERIALS ================= */
+
+.resource-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.resource-card {
+  background: white;
+  border: 1px solid #e4e8f0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.resource-type {
+  padding: .7rem 1rem;
+  font-size: .7rem;
+  font-weight: 900;
+  color: #5362d7;
+  background: #f4f6ff;
+}
+
+.video-container {
+  position: relative;
+  padding-top: 56.25%;
+  background: #111;
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.resource-body {
+  padding: 1.3rem;
+}
+
+.resource-body p {
+  color: #737c91;
+  line-height: 1.6;
+}
+
+.resource-link {
+  display: inline-block;
+  color: #5362d7;
+  font-weight: 800;
+  margin-top: .5rem;
+}
+
+/* ================= QUIZ ================= */
+
+.quiz-card {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  border: 1px solid #e4e8f0;
+}
+
+.quiz-options {
+  display: grid;
+  gap: .7rem;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .9rem;
+  border: 1px solid #e0e4ec;
+  border-radius: 10px;
+}
+
+.quiz-option.correct {
+  background: #e4f8eb;
+  border-color: #55b878;
+}
+
+.score-card {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 18px;
+  background: #5362d7;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-card strong {
+  font-size: 2rem;
+}
+
+/* ================= MODAL ================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 17, 40, .65);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.modal-card {
+  width: min(600px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header button {
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+  color: #737c91;
+}
+
+.form-actions {
+  display: flex;
+  gap: .7rem;
+  margin-top: 1.5rem;
+}
+
+.relationship-info {
+  background: #f5f7fb;
+  padding: .8rem;
+  border-radius: 8px;
+  color: #687188;
+}
+
+/* ================= MESSAGES ================= */
+
+.error-box,
+.message {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  background: #fff0f1;
+  color: #b3293a;
+}
+
+.empty-state,
+.loading {
+  padding: 3rem;
+  text-align: center;
+  color: #737c91;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+  .login-page {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.2rem;
+    gap: 2rem;
+  }
+
+  .topbar,
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .page-section,
+  .workspace {
+    width: 92%;
+    padding: 2rem 0;
+  }
+
+  .subject-main {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}

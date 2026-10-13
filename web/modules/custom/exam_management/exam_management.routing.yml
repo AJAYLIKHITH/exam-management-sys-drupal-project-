@@ -1,0 +1,39 @@
+exam_management.me:
+  path: '/api/exam-management/me'
+  defaults:
+    _controller: '\Drupal\exam_management\Controller\AccountController::me'
+  requirements:
+    _access: 'TRUE'
+  methods: [GET]
+
+exam_management.login:
+  path: '/api/exam-management/login'
+  defaults:
+    _controller: '\Drupal\exam_management\Controller\AccountController::login'
+  requirements:
+    _access: 'TRUE'
+  methods: [POST, OPTIONS]
+
+exam_management.logout:
+  path: '/api/exam-management/logout'
+  defaults:
+    _controller: '\Drupal\exam_management\Controller\AccountController::logout'
+  requirements:
+    _access: 'TRUE'
+  methods: [POST, OPTIONS]
+
+exam_management.register:
+  path: '/api/exam-management/register'
+  defaults:
+    _controller: '\Drupal\exam_management\Controller\AccountController::register'
+  requirements:
+    _access: 'TRUE'
+  methods: [POST, OPTIONS]
+
+exam_management.delete:
+  path: '/api/exam-management/delete'
+  defaults:
+    _controller: '\Drupal\exam_management\Controller\AccountController::deleteContent'
+  requirements:
+    _access: 'TRUE'
+  methods: [POST, OPTIONS]

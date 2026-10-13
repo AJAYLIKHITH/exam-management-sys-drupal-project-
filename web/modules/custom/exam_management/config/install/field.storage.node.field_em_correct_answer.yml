@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module: [options]
+id: node.field_em_correct_answer
+field_name: field_em_correct_answer
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    - { value: '1', label: 'Option 1' }
+    - { value: '2', label: 'Option 2' }
+    - { value: '3', label: 'Option 3' }
+    - { value: '4', label: 'Option 4' }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: false
+indexes: {}
+persist_with_no_fields: false
+custom_storage: false

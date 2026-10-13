@@ -1,0 +1,30 @@
+# PHP / Composer dependencies (recreate with `composer install`).
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+
+# JavaScript dependencies and generated build files.
+/frontend/node_modules/
+/frontend/dist/
+
+# Drupal runtime files, caches, uploaded files, and private local configuration.
+/web/sites/*/files/
+/web/sites/*/settings.local.php
+/web/sites/*/services.local.yml
+/web/sites/*/settings.php
+!/web/sites/default/default.settings.php
+!/web/sites/default/default.services.yml
+
+# Local environment files and database dumps may contain secrets or personal data.
+.env
+.env.*
+*.sql
+*.sqlite
+*.sqlite3
+
+# Editor and operating-system files.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

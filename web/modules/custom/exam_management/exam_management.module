@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Hooks for the Exam Management module.
+ */
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_node_access().
+ *
+ * Published learning content is readable by authenticated students. Editing is
+ * left to Drupal's standard node permissions, typically granted to Admin.
+ */
+function exam_management_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  if ($op === 'view' && $node->isPublished() && in_array($node->bundle(), ['exam', 'subject', 'material', 'quiz'], TRUE)) {
+    return $account->isAuthenticated()
+      ? AccessResult::allowed()->cachePerUser()
+      : AccessResult::neutral();
+  }
+  return AccessResult::neutral();
+}

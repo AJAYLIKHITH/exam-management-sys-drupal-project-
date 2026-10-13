@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config: [field.storage.node.field_em_url, node.type.material]
+  module: [link]
+id: node.material.field_em_url
+field_name: field_em_url
+entity_type: node
+bundle: material
+label: Resource URL
+description: 'URL of the video or PDF.'
+required: true
+translatable: false
+default_value: []
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link
+

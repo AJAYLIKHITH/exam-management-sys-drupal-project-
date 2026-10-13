@@ -1,0 +1,4 @@
+access exam management api:
+  title: 'Access Exam Management API content'
+  description: 'Allows read-only access to published exams, subjects, materials, and quizzes through JSON:API.'
+

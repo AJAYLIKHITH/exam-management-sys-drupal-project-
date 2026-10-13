@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config: [field.storage.node.field_em_exam, node.type.exam, node.type.subject]
+id: node.subject.field_em_exam
+field_name: field_em_exam
+entity_type: node
+bundle: subject
+label: Exam
+description: ''
+required: true
+translatable: false
+default_value: []
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: { exam: exam }
+    sort: { field: _none, direction: ASC }
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
+

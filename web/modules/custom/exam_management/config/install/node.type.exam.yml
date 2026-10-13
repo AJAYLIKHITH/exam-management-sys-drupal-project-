@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+name: Exam
+type: exam
+description: 'A competitive examination.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
+

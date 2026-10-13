@@ -1,0 +1,13 @@
+name: Exam Management
+type: module
+description: 'Provides the content model and API permissions for the Competitive Exam Management System.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node
+  - drupal:text
+  - drupal:options
+  - drupal:link
+  - drupal:jsonapi
+  - drupal:rest
+  - drupal:serialization
